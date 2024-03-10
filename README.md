@@ -117,4 +117,6 @@ To run the ExpressJS server, follow these simple steps:
 ```npm install```
 
 ### **Start the server:**
-```npm start```
+```
+npm start
+```
