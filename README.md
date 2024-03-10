@@ -1,75 +1,62 @@
-# Rest API Documentation
+# Short Rest API Documentation
 
 ## User Actions
 
 ### Signup
-
-- **Method:** POST
-- **URL:** http://localhost:500/api/v1/user/signup
-- **Body:** username, password, email
+| Method | URL                                      | Body                              |
+| ------ | ---------------------------------------- | --------------------------------- |
+| POST   | http://localhost:500/api/v1/user/signup  | username, password, email         |
 
 ### Login
+| Method | URL                                      | Body                  |
+| ------ | ---------------------------------------- | --------------------- |
+| POST   | http://localhost:500/api/v1/user/login   | username, password   |
 
-- **Method:** POST
-- **URL:** http://localhost:500/api/v1/user/login
-- **Body:** username, password
+### User Requests
 
-## User Requests
+#### Get All Food Data
+| Method | URL                                      |
+| ------ | ---------------------------------------- |
+| GET    | http://localhost:500/api/v1/food         |
 
-### Get All Food Data
+#### Get User Orders
+| Method | URL                                      | Requires Token       |
+| ------ | ---------------------------------------- | --------------------- |
+| GET    | http://localhost:500/api/v1/food/my-orders | Yes                   |
 
-- **Method:** GET
-- **URL:** http://localhost:500/api/v1/food
+#### Order Food Request
+| Method | URL                                      | Requires Token       |
+| ------ | ---------------------------------------- | --------------------- |
+| POST   | http://localhost:500/api/v1/food/order/<food ID> | Yes              |
 
-### Get User Orders
-
-- **Method:** GET
-- **URL:** http://localhost:500/api/v1/food/my-orders
-- **Requires Token:** Yes
-
-### Order Food Request
-
-- **Method:** POST
-- **URL:** http://localhost:500/api/v1/food/order/<food ID>
-- **Requires Token:** Yes
-
-### User Received Order Request
-
-- **Method:** POST
-- **URL:** http://localhost:500/api/v1/food/order/received/<food ID>
-- **Requires Token:** Yes
+#### User Received Order Request
+| Method | URL                                      | Requires Token       |
+| ------ | ---------------------------------------- | --------------------- |
+| POST   | http://localhost:500/api/v1/food/order/received/<food ID> | Yes      |
 
 ## Admin Actions
 
 ### Get All Orders
-
-- **Method:** GET
-- **URL:** http://localhost:500/api/v1/admin/order
-- **Requires Admin:** Yes
+| Method | URL                                      | Requires Admin       |
+| ------ | ---------------------------------------- | --------------------- |
+| GET    | http://localhost:500/api/v1/admin/order  | Yes                   |
 
 ### Add New Food Data
-
-- **Method:** POST
-- **URL:** http://localhost:500/api/v1/admin/food/add
-- **Body:** food_name, ingredients, price
-- **Requires Admin:** Yes
+| Method | URL                                      | Body                                  | Requires Admin       |
+| ------ | ---------------------------------------- | ------------------------------------- | --------------------- |
+| POST   | http://localhost:500/api/v1/admin/food/add | food_name, ingredients, price         | Yes                   |
 
 ### Edit Food Data
-
-- **Method:** PATCH
-- **URL:** http://localhost:500/api/v1/admin/food/<food ID>
-- **Body:** food_name, ingredients, price
-- **Requires Admin:** Yes
+| Method | URL                                      | Body                                  | Requires Admin       |
+| ------ | ---------------------------------------- | ------------------------------------- | --------------------- |
+| PATCH  | http://localhost:500/api/v1/admin/food/<food ID> | food_name, ingredients, price    | Yes                   |
 
 ### Set Delivery Status
-
-- **Method:** POST
-- **URL:** http://localhost:500/api/v1/admin/order/deliver/<food ID>
-- **Body:** newStatus (options: pending, delivering, completed, canceled, received)
-- **Requires Admin:** Yes
+| Method | URL                                      | Body (newStatus: pending, delivering, completed, canceled, received) | Requires Admin       |
+| ------ | ---------------------------------------- | ------------------------------------- | --------------------- |
+| POST   | http://localhost:500/api/v1/admin/order/deliver/<food ID> | Yes             |
 
 ### Delete Food Data
-
-- **Method:** DELETE
-- **URL:** http://localhost:500/api/v1/admin/order/<food ID>
-- **Requires Admin:** Yes
+| Method | URL                                      | Requires Admin       |
+| ------ | ---------------------------------------- | --------------------- |
+| DELETE | http://localhost:500/api/v1/admin/order/<food ID> | Yes             |
