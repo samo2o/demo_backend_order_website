@@ -1,6 +1,4 @@
-# Short Rest API Documentation
-
-## User Actions
+# Rest API User Actions
 
 ### Signup
 
