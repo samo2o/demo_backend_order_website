@@ -117,4 +117,4 @@ cd path/to/your/project
 npm install
 
 ### **Start the server:**
-npm start
+```npm start```
