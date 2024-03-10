@@ -79,42 +79,64 @@
 ## Install MongoDB:
 
 ### Open a terminal.
-```sudo apt update```
+```
+sudo apt update
+```
 
 ### Install MongoDB.
-```sudo apt install -y mongodb```
+```
+sudo apt install -y mongodb
+```
 
 ### Start MongoDB service.
-```sudo systemctl start mongodb```
+```
+sudo systemctl start mongodb
+```
 
 ### Enable MongoDB to start on boot.
-```sudo systemctl enable mongodb```
+```
+sudo systemctl enable mongodb
+```
 
 ### Open a new terminal and run the following command to start MongoDB with the specified configuration.
-```sudo mongod --replSet rs0 --port 27017 --oplogSize 128```
+```
+sudo mongod --replSet rs0 --port 27017 --oplogSize 128
+```
 
 ### Open another terminal.
 Access the MongoDB shell.
-```mongosh```
+```
+mongosh
+```
 
 ### In the MongoDB shell, initiate the replica set.
-```rs.initiate()```
+```
+rs.initiate()
+```
 
 ### Create and use a database.
-```use demo_order_website_1```
+```
+use demo_order_website_1
+```
 
 ### Create a user with read-write permissions.
-```db.createUser({ user: 'samo', pwd: '123', roles: ['readWrite'] })```
+```
+db.createUser({ user: 'samo', pwd: '123', roles: ['readWrite'] })
+```
 
 # Starting the ExpressJS Server
 
 To run the ExpressJS server, follow these simple steps:
 
 ### **Navigate to the project directory:**
-```cd path/to/your/project```
+```
+cd path/to/your/project
+```
 
 ### **Install dependencies:**
-```npm install```
+```
+npm install
+```
 
 ### **Start the server:**
 ```
