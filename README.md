@@ -1,4 +1,4 @@
-![Mee](https://drive.google.com/file/d/1Dw3fJoMMTSthSo4pCyi0Eyo2E-1TvjY4/view?usp=sharing)
+![Mee](https://drive.google.com/uc?export=view&id=1Dw3fJoMMTSthSo4pCyi0Eyo2E-1TvjY4)
 # Rest API User Actions
 
 ### Signup
